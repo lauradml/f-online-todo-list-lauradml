@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img class="logo-img" src="./images/logo-adalab-80px.png" alt="logo-adalab">
+    </div>
+    <div class="date">
+        <span class="day" id="day-number">9</span>
+
+          <div>
+            <span class="week-day" id="day-week-id">lunes</span>
+            <span class="month" id="month-id">novimbre</span>
+            <span class="year" id="year-id">2018</span>
+          </div>
+    </div>
+    </header>
+
+    <main class="main">
+      <div class="container-ist">
+        <ul class="list" id="list-id">
+        </ul>
+      </div>
+
+
+      <div class="modal" id="modal-id">
+        <label class="label-input">Nueva tarea</label>
+        <input type="text" class="imput-task" name="task" id="task-imput">
+        <button type="button-add" name="add-button">Añadir</button>
+      </div>
+
+      <div class="container-plus" id="container-plus-id">
+        <i class="fas fa-plus plus"></i>
+      </div>
+
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
