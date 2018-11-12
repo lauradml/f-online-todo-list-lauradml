@@ -14,7 +14,9 @@ let newTask = {
 
 function printTasks(){
     list.innerHTML = '';
-    if(tasks){
+    if(JSON.parse(localStorage.getItem('tasks'))){
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+
         for(let i = 0; i < tasks.length; i++){
             const newTask = document.createElement('li');
             newTask.classList.add('tasks-item');
@@ -27,7 +29,7 @@ function printTasks(){
             taskInput.type = 'checkbox';
             taskInput.setAttribute('name', 'tasks');
             taskInput.setAttribute('id', tasks[i].order);
-      
+
             if(tasks[i].checked === true){
                 newTask.classList.add('.cross-out');
                 taskInput.checked = true;
@@ -47,8 +49,14 @@ function writeTasks(e){
     newTask.value = e.currentTarget.value;
 }
 
+
+function saveLocalStorage(){
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
 function functionsTasks(){
     tasks.unshift(newTask);
+    saveLocalStorage();
     printTasks();
 
 }
