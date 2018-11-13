@@ -70,6 +70,7 @@ function reorder(){
 
 function saveLocalStorage(){
     localStorage.setItem('tasks', JSON.stringify(tasks));
+
 }
 
 modal.classList.add('closed');

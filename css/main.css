@@ -1,14 +1,123 @@
 
-/* .cross-out{
-  text-decoration: line-through;
-  color: grey;
-} */
-.closed{
-  display: none;
+body{
+  background-color: #61d0cc;
+  display: flex;
+  justify-content: center;
 }
-ul{
+.container{
+  background-color: #ffffff;
+  font-size: 15px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 350px;
+  height :80vh;
+  margin-top: 40px;
+  font-size: 18px;
+  font-family:arial;
+
+}
+.header{
+  border-bottom: 1px solid #61d0cc;
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  padding-top: 15px;
+}
+
+.logo-img{
+    width: 100px;
+}
+.date{
+  display: flex;
+  justify-content: space-around;
+}
+.day{
+  color:#61d0cc;
+  font-size: 45px;
+}
+.week-month{
   display: flex;
   flex-direction: column;
+  font-size: 16px;
+}
+.month{
+  color:#4f555c;
+}
+
+.container-list{
+  height: 350px;
+  position: relative;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+}
+.tasks-item{
+  text-decoration: none;
+}
+.container-plus{
+  border-top:1px solid #61d0cc;
+  height: 70px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-plus{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  border: 4px solid #61d0cc;
+}
+.plus{
+  padding-top: 15px;
+  color:#61d0cc;
+}
+.modal{
+  width: 300px;
+  height: 200px;
+  background: #0cacc8;
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  align-items: center;
+  margin-left: 25px;
+}
+.label-input-container{
+  text-align: left;
+  padding-top: 35px;
+}
+.imput-task-container{
+  padding-bottom: 35px;
+}
+.imput-task{
+  width: 250px;
+  height: 40px;
+  border: 1px solid  #ffffff;
+  background: #0cacc8;
+
+}
+.add-button{
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  border: 4px solid  #ffffff;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background: #0cacc8;
+  color: #ffffff;
+  font-size: 20px;
+
+}
+
+.closed{
+  display: none;
 }
 .done{
   order: 999;
