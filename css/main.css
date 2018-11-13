@@ -3,3 +3,6 @@
   text-decoration: line-through;
   color: grey;
 }
+.closed{
+  display: none;
+}
