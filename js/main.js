@@ -8,6 +8,18 @@ const modal = document.querySelector('.modal');
 const plus = document.querySelector('.container-plus');
 
 
+function getDate() {
+    var month = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+        "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+    var days = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
+    var x = new Date();
+    document.getElementById('day-number').innerHTML=(x.getDate());
+    document.getElementById('day-week-id').innerHTML=(days[x.getDay()]);
+    document.getElementById('month-id').innerHTML=(month[x.getMonth()] +', '+ x.getFullYear());
+
+}
+getDate();
+
 let tasks = [];
 
 let newTask = {
@@ -32,9 +44,9 @@ function printTasks(){
             taskInput.type = 'checkbox';
             taskInput.setAttribute('name', 'tasks');
             taskInput.setAttribute('id', tasks[i].order);
-            // taskInput.addEventListener('change', positionTasks);
+            taskInput.addEventListener('change', positionTasks);
             if(tasks[i].checked === true){
-                newTask.classList.add('cross-out');
+                newTask.classList.add('done');
                 taskInput.checked = true;
             }
             newTask.appendChild(taskInput);
@@ -79,24 +91,15 @@ function functionsTasks(){
     toggle()
 }
 
-// function positionTasks(e){
-//     const id = e.target.id;
-//     const item = tasks[id];
-//     if(item.checked === false){
-//         const possition = tasks.length;
-//         item.checked = true;
-//         item.insertAdjacentHTML('beforebegin',possition);
-//         reorder();
-//         saveLocalStorage();
-//         printTasks();
-//     } else {
-//         item.checked = false;
-//         tasks.
-//         reorder();
-//         saveLocalStorage();
-//         printTasks();
-//     }
-// }
+function positionTasks(e){
+
+    const item= e.target.parentElement;
+    if(item.classList.contains('done') === false){
+      item.classList.add('done');
+    } else {
+        item.classList.remove('done');
+    }
+}
 
 addButton.addEventListener('click', functionsTasks);
 inputTask.addEventListener('change', writeTasks);

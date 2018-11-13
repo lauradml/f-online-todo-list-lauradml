@@ -1,8 +1,17 @@
 
-.cross-out{
+/* .cross-out{
   text-decoration: line-through;
   color: grey;
-}
+} */
 .closed{
   display: none;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+}
+.done{
+  order: 999;
+  text-decoration: line-through;
+  color: grey;
 }
